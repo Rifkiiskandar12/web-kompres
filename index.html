@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kompress file</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="icon">⚡</span>
+                <strong>SqueezeIt</strong>
+            </div>
+            <nav class="main-nav">
+                <a href="#">Beranda</a>
+                <a href="#how-it-works">Cara Kerja</a>
+                <a href="https://github.com/username/repo" target="_blank" class="github-link">GitHub</a>
+            </nav>
+        </div>
+    </header>   
+    <main class="container">
+        <header class="content-header">
+            <h1>press oh kompress</h1>
+            <p>program pengecilan file.</p>
+        </header>
+
+        <section class="upload-section">
+            <div class="drop-zone" id="dropZone">
+                <span>Klik atau tarik foto ke sini</span>
+                <input type="file" id="fileInput" accept="image/*">
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <div class="control-group">
+                <label for="quality">Kualitas: <b id="qualityLabel">70%</b></label>
+                <input type="range" id="quality" min="10" max="100" value="70">
+            </div>
+        </section>
+
+        <section id="resultSection" class="result-section hidden">
+            <div class="comparison">
+                <div class="stat-card">
+                    <span>Original</span>
+                    <strong id="oldSize">-</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Hasil</span>
+                    <strong id="newSize">-</strong>
+                </div>
+            </div>
+            <img id="preview" alt="Pratinjau Hasil">
+            <a id="downloadBtn" download="compressed_image.jpg" class="btn">Download Hasil</a>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
